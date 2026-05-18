@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Offer Letter Generator</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px; }
+        form { max-width: 600px; margin: 40px auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        input, button { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+        button { background: #1e3a8a; color: white; font-size: 16px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <form action="/generate-offer" method="POST">
+        <h2>Spacesyntax Offer Letter Generator</h2>
+        
+        <label>Candidate Name:</label>
+        <input type="text" name="candidateName" value="<%= candidateName %>" required>
+        
+        <label>Position:</label>
+        <input type="text" name="position" value="<%= position %>" required>
+        
+        <label>Annual CTC (₹):</label>
+        <input type="number" name="salary" value="<%= salary %>" required>
+        
+        <label>Start Date:</label>
+        <input type="text" name="startDate" value="<%= startDate %>" placeholder="1st June 2026" required>
+        
+        <button type="submit">Generate & Download PDF Offer Letter</button>
+    </form>
+</body>
+</html>
